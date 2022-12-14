@@ -12,3 +12,5 @@ let calcCliente2 = value2 * peca2;
 let ValorPagar = calcCliente1 + calcCliente2;
 
 console.log(`VALOR A PAGAR: R$ ${ValorPagar.toFixed(2)}`);
+
+//Link https://www.beecrowd.com.br/judge/pt/problems/view/1010

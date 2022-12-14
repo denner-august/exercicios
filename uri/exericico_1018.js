@@ -12,3 +12,5 @@ notas.reduce((preve, next, index, array) => {
 
   return preve;
 }, 0);
+
+//Link https://www.beecrowd.com.br/judge/pt/problems/view/1018

@@ -19,3 +19,5 @@ console.log(`CIRCULO: ${area.toFixed(3)}`);
 console.log(`TRAPEZIO: ${trapzio.toFixed(3)}`);
 console.log(`QUADRADO: ${quadrado.toFixed(3)}`);
 console.log(`RETANGULO: ${retangulo.toFixed(3)}`);
+
+//Link https://www.beecrowd.com.br/judge/pt/problems/view/1012

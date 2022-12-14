@@ -13,3 +13,5 @@ let b = (y2 - y1) ** 2;
 let distancia = Math.sqrt(a + b);
 
 console.log(distancia.toFixed(4));
+
+//Link https://www.beecrowd.com.br/judge/pt/problems/view/1015
