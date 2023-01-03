@@ -1,16 +1,27 @@
 console.clear();
 const input = require("fs").readFileSync("stdin", "utf8");
 
-let [numero] = input.split("\n");
+let [total] = input.split("\n");
 
-let notas = [100];
+let numero = total;
 
-let atual = 0;
+let notas = [100, 50, 20, 10, 5, 2, 1];
 
-notas.reduce((preve, next, index, array) => {
-  let teste = [];
+let decomposicao = {};
 
-  return preve;
-}, 0);
+notas.forEach((nota) => {
+  decomposicao[nota] = 0;
+  while (numero >= nota) {
+    decomposicao[nota]++;
+    numero -= nota;
+  }
+});
 
-//Link https://www.beecrowd.com.br/judge/pt/problems/view/1018
+const result = notas.map((nota) => {
+  return `${decomposicao[nota]} nota(s) de ${nota.toLocaleString("pt-br", {
+    style: "currency",
+    currency: "BRL",
+  })}`;
+});
+
+let log = [total, ...result];
