@@ -1,4 +1,8 @@
 console.clear();
-function bubbleSort(arr, n) {}
+function bubbleSort(arr) {
+    return arr.sort((a,b) => a - b)
+}
 
-console.log(bubbleSort([4, 1, 3, 9, 7]));
+const arr = [5, 1, 4, 2, 8]
+
+console.log(bubbleSort(arr));
