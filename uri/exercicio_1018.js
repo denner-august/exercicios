@@ -7,34 +7,51 @@ let numeroTotal = total;
 
 let notas = [100, 50, 20, 10, 5, 2, 1];
 
-let saida = [];
-
 let decomposicao = {};
 
-notas.forEach((nota) => {
-  decomposicao[nota] = 0;
-  while (numeroTotal >= nota) {
-    decomposicao[nota]++;
-    numeroTotal -= nota;
-  }
-});
 
-const result = notas.map((nota) => {
-  return `${decomposicao[nota]} nota(s) de ${nota.toLocaleString("pt-br", {
-    style: "currency",
-    currency: "BRL",
-  })}`;
-});
+ function teste() {
+    let caixa = []
+  
+  notas.forEach((nota) => {
+    decomposicao[nota] = 0;
+    while (numeroTotal >= nota) {
+      decomposicao[nota]++;
+      numeroTotal -= nota;
+    }
+  });
+  
+  const result = notas.map((nota) => {
+    return `${decomposicao[nota]} nota(s) de ${nota.toLocaleString("pt-br", {
+      style: "currency",
+      currency: "BRL",
+    })}`;
+  });
+  
+  
+  result.unshift(total);
+  
+  
+   result.reduce((preve, next, index, arr) => {
+    preve = next;
+  
+    caixa.push(preve)
+    
+    return preve;
+  }, []);
 
-result.unshift(total);
+  return caixa
+}
 
-result.reduce((preve, next, index, arr) => {
-  preve = next;
+let tes = teste()
 
-  console.log(preve);
+console.log(tes.join("\n"));
 
-  return preve;
-}, []);
+
+
+// console.log(caixa.join("\n"));
+
+/*
 
 // const result = notas.map((nota) => {
 //   return `${decomposicao[nota]} nota(s) de ${nota.toLocaleString("pt-br", {
@@ -43,4 +60,7 @@ result.reduce((preve, next, index, arr) => {
 //   })}`;
 // });
 
-// console.log(saida);
+*/
+  // const result = notas.map((nota) => {
+  //   return `${decomposicao[nota]} nota(s) de ${nota.toFixed(2)}`;
+  // });
