@@ -9,10 +9,10 @@ let numeros = [365, 30]
 
 let datas = {}
 
-
 for (let index = 0; index < numeros.length; index++) {
 
-    let calc = Math.round(segundos / numeros[index])
+    let calc = Math.floor(segundos / numeros[index])
+
 
     let multiplica = (numeros[index] * calc)
 
@@ -20,14 +20,13 @@ for (let index = 0; index < numeros.length; index++) {
 
     if (numeros[index] === 365) {
         datas.ano = calc
-
     }
 
     if (numeros[index] === 30) {
         datas.mes = calc
     }
 
-    datas.dias = segundos
+    datas.dias = Math.abs(segundos)
 }
 
-console.log(`${datas.ano} ano(s)\n${datas.mes} mes(es)\n${datas.dias} dia(s)\n`);
+console.log(`${datas.ano} ano(s)\n${datas.mes} mes(es)\n${datas.dias} dia(s)`);
