@@ -27,8 +27,7 @@ const result = notas.map((nota) => {
 
 result.unshift(total);
 
-result.forEach(item => console.log(item))
-
+console.log(`${result.join('\n')}`);
 
 
 
